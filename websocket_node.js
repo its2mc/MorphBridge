@@ -5,14 +5,14 @@ This is a bridging node for websocket transport.
 //Express is not necesary for this application.
 var comms = require('morphBridge').comms,
 	logger = require('morphBridge').logger,
-	channels_obj = require('morphBridge').channels_obj,
+	channels_obj = require('morphBridge').channels_obj, 
 	WebSocketServer = require('ws').Server,
 	wsPort = 9090,
 	ws = new WebSocketServer({port: wsPort}),
 	host = (process.env.VCAP_APP_HOST || 'localhost');
 
 //Logger Initialization
-//	logger.init();
+	logger.init();
 
 //Socket Initialisation
 	var publisher = comms.init();
