@@ -12,16 +12,20 @@ var comms = require('morphBridge').comms,
 	host = (process.env.VCAP_APP_HOST || 'localhost');
 
 //Logger Initialization
-//	logger.init();
+logger.init();
+
+//Handle internode messages
+/*
+Place your own function to handle messages recieved by the node.
+*/ 
+var handle = function(msg){
+	console.log('Received ZMQ message: '+ msg);
+	//logger.logStat('Received ZMQ message: '+ msg);
+};
 
 //Socket Initialisation
-	var publisher = comms.init();
-	var subscriber = comms.subscribe();
+comms.init(handle); //Pass message handling function to sub_socket
 
-//Handle subscriber messages 
-	subscriber.on("message", function(msg) {
-  		console.log('Received ZMQ message: '+ msg);
-	});
 
 //Function to recieve Messages from clients and translate into cloud commands If no commands then translator
 //gives a console error and performs no function on the client side.
@@ -86,5 +90,7 @@ var translator = function(msg,userSock){
 ws.on('connection', function (ws_sock) {
     ws_sock.on('message', function (message) {
   		console.log(message);
+		if(comms.transmit(message))
+			console.log("Message Sent");
     });
 });
