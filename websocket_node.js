@@ -29,7 +29,6 @@ comms.init(handle); //Pass message handling function to sub_socket
 ws.on('connection', function (ws_sock) {
     ws_sock.on('message', function (message) {
   		console.log(message);
-//		logger.logStat(message);
 		if(comms.transmit(message))
 			console.log("Message Sent");
 //			logger.logStat("Message Sent");
