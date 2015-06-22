@@ -13,8 +13,26 @@
 //Nodejs implementation of a http server
 
 // Import required Modules
-var http = require('http');
-var fs = require('fs');
+var comms = require('morphBridge').comms,
+    logger = require('morphBridge').logger,
+    channels_obj = require('morphBridge').channels_obj, 
+	http = require('http'),
+	fs = require('fs');
+
+//Logger Initialization
+logger.init();
+
+//Handle internode messages
+/*
+Place your own function to handle messages recieved by the node.
+*/ 
+var handle = function(msg){
+    console.log('Received ZMQ message: '+ msg);
+    //logger.logStat('Received ZMQ message: '+ msg);
+};
+
+//Socket Initialisation
+comms.init(handle); //Pass message handling function to sub_socket
 
 // Declare any variables/constants
 var index = fs.readFileSync('web/index.html');

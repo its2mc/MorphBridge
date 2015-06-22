@@ -15,9 +15,10 @@
 // Import required Modules
 var comms = require('morphBridge').comms,
     logger = require('morphBridge').logger,
-    channels_obj = require('morphBridge').channels_obj, 
-    http = require('http'),
-    fs = require('fs');
+    channels_obj = require('morphBridge').channels_obj,
+    zmq = require('zmq'),
+	pub = zmq.socket('pub');
+
 
 //Logger Initialization
 logger.init();
@@ -29,14 +30,17 @@ Place your own function to handle messages recieved by the node.
 var handle = function(msg){
     console.log('Received ZMQ message: '+ msg);
     //logger.logStat('Received ZMQ message: '+ msg);
+    pub.send(msg);
 };
 
 //Socket Initialisation
 comms.init(handle); //Pass message handling function to sub_socket
 
-
-http.get("http://www.google.com/index.html", function(res) {
-  console.log("Got response: " + res.statusCode);
-}).on('error', function(e) {
-  console.log("Got error: " + e.message);
+//if publisher already bound skip
+publisher.bind('tcp://*:8688', function(err) {
+ 	if(err){
+    	console.log("Port already established: connecting...");
+		//if not then connect to bound publisher
+  	else
+   		console.log("Listening on 8688...");
 });
