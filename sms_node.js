@@ -16,6 +16,22 @@
 var http = require('http');
 var fs = require('fs');
 
+//Logger Initialization
+logger.init();
+
+//Handle internode messages
+/*
+Place your own function to handle messages recieved by the node.
+*/ 
+var handle = function(msg){
+    console.log('Received ZMQ message: '+ msg);
+    //logger.logStat('Received ZMQ message: '+ msg);
+};
+
+//Socket Initialisation
+comms.init(handle); //Pass message handling function to sub_socket
+
+
 http.get("http://www.google.com/index.html", function(res) {
   console.log("Got response: " + res.statusCode);
 }).on('error', function(e) {

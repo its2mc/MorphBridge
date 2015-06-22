@@ -1454,3 +1454,22 @@
 {"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-20T21:16:24.157Z"}
 {"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-20T21:16:24.169Z"}
 {"level":"info","message":"subscribe:","timestamp":"2015-06-20T21:16:24.200Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-22T10:26:23.146Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-22T10:26:23.151Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-22T10:26:23.662Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-22T10:26:25.853Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-22T10:26:25.869Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-22T10:26:26.177Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-22T10:26:28.069Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-22T10:26:57.780Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-22T10:26:57.786Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-22T10:26:58.470Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-22T10:27:00.600Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-22T10:28:00.265Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-22T10:28:00.270Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-22T10:28:00.846Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-22T10:28:03.066Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-22T10:28:23.151Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-22T10:28:23.163Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-22T10:28:23.231Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-22T10:28:23.277Z"}
