@@ -16,11 +16,15 @@
 var comms = require('morphBridge').comms,
     logger = require('morphBridge').logger,
     channels_obj = require('morphBridge').channels_obj, 
-    http = require('http'),
+    https = require('https');,
+    express = require('express'),
     fs = require('fs');
 
 //Logger Initialization
 logger.init();
+
+//Initialize buffer
+var buffer = channels_obj.buffer_init();
 
 //Handle internode messages
 /*
@@ -34,9 +38,53 @@ var handle = function(msg){
 //Socket Initialisation
 comms.init(handle); //Pass message handling function to sub_socket
 
+// We need this to build our post string
+var querystring = require('querystring');
 
-http.get("http://www.google.com/index.html", function(res) {
-  console.log("Got response: " + res.statusCode);
-}).on('error', function(e) {
-  console.log("Got error: " + e.message);
-});
+// Your login credentials
+var username = 'MyUsername';
+var apikey   = 'MyApiKey';
+
+function fetchMessages(lastReceivedId_) {
+    // Build the post string from an object
+    var options = {
+		host: 'api.africastalking.com',
+		port: '443',
+		path: '/version1/messaging?username=' + username + '&lastReceivedId=' + lastReceivedId_,
+		method: 'GET',
+		
+		rejectUnauthorized : false,
+		requestCert        : true,
+		agent              : false,
+  
+		headers: {
+		    'Accept': 'application/json',
+		    'apikey': apikey
+		}
+    };
+    
+       var request = https.request(options, function(res) {
+	    res.setEncoding('utf8');
+	    res.on('data', function (chunk) {
+		    var jsObject = JSON.parse(chunk);
+		    var messages = jsObject.SMSMessageData.Messages;
+		    if ( messages.length > 0 ) {
+				for (var i = 0; i < messages.length; ++i ) {
+				    var logStr  = 'from=' + messages[i].from;
+				    logStr     += ';message=' + messages[i].text;
+
+				    lastReceivedId_ = messages[i].id;
+				}
+				channels_obj.broadcast(logStr);
+				// Recursively fetch messages
+				fetchMessages(lastReceivedId_);
+		    } 
+		});
+	});
+    
+    request.end();
+    console.log('LastReceivedId: ' + lastReceivedId_);
+}
+
+var lastReceivedId = 0;
+fetchMessages(lastReceivedId);
