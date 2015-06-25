@@ -16,15 +16,14 @@
 var comms = require('morphBridge').comms,
     logger = require('morphBridge').logger,
     channels_obj = require('morphBridge').channels_obj, 
-    https = require('https');,
-    express = require('express'),
-    fs = require('fs');
+    http = require('http'),
+    https = require('https');
 
 //Logger Initialization
 logger.init();
 
 //Initialize buffer
-var buffer = channels_obj.buffer_init();
+//var buffer = channels_obj.buffer_init();
 
 //Handle internode messages
 /*
@@ -35,6 +34,7 @@ var handle = function(msg){
     //logger.logStat('Received ZMQ message: '+ msg);
 };
 
+
 //Socket Initialisation
 comms.init(handle); //Pass message handling function to sub_socket
 
@@ -42,8 +42,8 @@ comms.init(handle); //Pass message handling function to sub_socket
 var querystring = require('querystring');
 
 // Your login credentials
-var username = 'MyUsername';
-var apikey   = 'MyApiKey';
+var username = 'its2uraps';
+var apikey   = 'bf5e56550abd9434eaf31fe26f22875f65b5d6afa4c6f1f01ddf896bc8a6d1a2';
 
 function fetchMessages(lastReceivedId_) {
     // Build the post string from an object
@@ -63,28 +63,40 @@ function fetchMessages(lastReceivedId_) {
 		}
     };
     
-       var request = https.request(options, function(res) {
+    var request = https.request(options, function(res) {
 	    res.setEncoding('utf8');
 	    res.on('data', function (chunk) {
+	    	
+	    	
+	    	//console.log(JSON.parse(chunk));
 		    var jsObject = JSON.parse(chunk);
+		    comms.transmit(chunk);
+		    
 		    var messages = jsObject.SMSMessageData.Messages;
+
 		    if ( messages.length > 0 ) {
 				for (var i = 0; i < messages.length; ++i ) {
 				    var logStr  = 'from=' + messages[i].from;
 				    logStr     += ';message=' + messages[i].text;
+					console.log(logStr);
 
 				    lastReceivedId_ = messages[i].id;
 				}
-				channels_obj.broadcast(logStr);
-				// Recursively fetch messages
-				fetchMessages(lastReceivedId_);
+				
+				
 		    } 
 		});
 	});
     
     request.end();
     console.log('LastReceivedId: ' + lastReceivedId_);
+    setTimeout(function(){ 
+		fetchMessages(lastReceivedId); 
+	}, 3000);
 }
 
 var lastReceivedId = 0;
-fetchMessages(lastReceivedId);
+
+setTimeout(function(){ 
+	fetchMessages(lastReceivedId); 
+}, 3000);

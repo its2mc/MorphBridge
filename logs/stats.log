@@ -1473,3 +1473,178 @@
 {"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-22T10:28:23.163Z"}
 {"level":"info","message":"subscribe:","timestamp":"2015-06-22T10:28:23.231Z"}
 {"level":"error","message":"child process exited with error code","timestamp":"2015-06-22T10:28:23.277Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T07:43:55.234Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T07:43:55.239Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T07:43:56.940Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-23T07:43:57.139Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-23T07:43:57.147Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-23T07:43:57.446Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T07:46:53.644Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T07:46:53.649Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T07:46:55.157Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-23T07:46:55.629Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-23T07:46:55.639Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-23T07:46:55.839Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T08:03:15.538Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T08:03:15.543Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T08:03:16.034Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-23T08:03:17.267Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-23T08:03:17.275Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-23T08:03:17.742Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T08:03:42.507Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T08:03:42.511Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T08:03:43.007Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-23T08:03:44.278Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-23T08:03:44.286Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-23T08:03:44.695Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T08:03:46.739Z"}
+{"level":"info","message":"unsubscribe:","timestamp":"2015-06-23T08:18:02.498Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-23T09:15:50.308Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T09:15:50.308Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T09:15:50.312Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T09:15:50.818Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T09:15:52.259Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T09:23:18.963Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T09:23:18.968Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T09:23:19.521Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-23T09:23:20.739Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-23T09:23:20.747Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-23T09:23:21.155Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T09:23:22.929Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T09:23:23.051Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T09:23:23.056Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T09:23:23.595Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T09:23:25.142Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T10:45:09.380Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T10:45:09.385Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T10:45:33.467Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T10:45:33.472Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T10:45:33.975Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T10:45:35.303Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T10:55:56.099Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T10:55:56.103Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T10:55:56.610Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T10:55:58.062Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T10:56:09.473Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T10:56:09.478Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T10:56:09.989Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T10:56:11.351Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-23T10:56:34.040Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-23T10:56:34.048Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-23T10:56:34.515Z"}
+{"level":"info","message":"unsubscribe:","timestamp":"2015-06-23T10:57:31.165Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-23T11:07:21.520Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T11:07:21.520Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T11:07:21.525Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T11:07:22.037Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T11:07:23.374Z"}
+{"level":"info","message":"unsubscribe:","timestamp":"2015-06-23T11:08:04.011Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-23T11:08:37.814Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T11:08:37.814Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T11:08:37.819Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T11:08:38.324Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T11:08:39.747Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T11:09:05.750Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T11:09:05.755Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T11:09:06.263Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T11:09:07.650Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T11:10:08.000Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T11:10:08.004Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T11:10:08.514Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T11:10:09.813Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-23T11:10:38.626Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-23T11:10:38.631Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-23T11:10:39.132Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-23T11:10:40.499Z"}
+{"level":"info","message":"unsubscribe:","timestamp":"2015-06-23T11:21:45.425Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T13:47:58.143Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T13:47:58.148Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T13:47:58.727Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-06-24T13:48:00.637Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-06-24T13:48:00.646Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-06-24T13:48:01.073Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T13:48:02.900Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T13:48:07.305Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T13:48:07.310Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T13:48:07.812Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T13:48:09.934Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T13:48:17.807Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T13:48:17.812Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T13:48:18.313Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T13:48:20.369Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T13:49:41.037Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T13:49:41.042Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T13:49:41.555Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T13:49:43.479Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T13:50:00.381Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T13:50:00.385Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T13:50:00.877Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T13:50:02.846Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T13:51:31.190Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T13:51:31.194Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T13:51:31.705Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T13:51:33.581Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T13:54:21.778Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T13:54:21.782Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T13:54:22.292Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T13:54:24.230Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T13:56:37.237Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T13:56:37.242Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T13:56:37.753Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T13:56:39.871Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T13:57:13.263Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T13:57:13.268Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T13:57:13.776Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T13:57:15.707Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:03:22.761Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:03:22.766Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:03:23.277Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:03:25.318Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:05:22.284Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:05:22.289Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:05:22.804Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:05:24.814Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:06:37.829Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:06:37.834Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:06:38.332Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:06:40.486Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:07:55.442Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:07:55.446Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:07:55.945Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:07:58.092Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:09:43.577Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:09:43.581Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:09:44.094Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:09:46.083Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:11:02.087Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:11:02.091Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:11:02.584Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:11:04.585Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:11:44.176Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:11:44.181Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:11:44.678Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:11:46.636Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:12:27.617Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:12:27.622Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:12:28.132Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:12:30.340Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:13:03.758Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:13:03.763Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:13:04.261Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:13:06.253Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:13:34.600Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:13:34.605Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:13:35.101Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:13:37.089Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:13:59.255Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:13:59.260Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:13:59.770Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:14:01.862Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:18:30.629Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:18:30.634Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:18:31.149Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:18:33.124Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-06-24T14:19:11.461Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:19:11.466Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:19:11.964Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:19:13.932Z"}

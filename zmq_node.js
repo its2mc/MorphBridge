@@ -16,7 +16,7 @@
 var comms = require('morphBridge').comms,
     logger = require('morphBridge').logger,
     channels_obj = require('morphBridge').channels_obj,
-    zmq = require('zmq'),
+    zmq = require('morphBridge/node_modules/zmq'),
 	pub = zmq.socket('pub');
 
 
@@ -37,8 +37,8 @@ var handle = function(msg){
 comms.init(handle); //Pass message handling function to sub_socket
 
 //if publisher already bound skip
-publisher.bind('tcp://*:8688', function(err) {
- 	if(err){
+pub.bind('tcp://*:2222', function(err) {
+ 	if(err)
     	console.log("Port already established: connecting...");
 		//if not then connect to bound publisher
   	else
