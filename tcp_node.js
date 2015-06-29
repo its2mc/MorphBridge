@@ -15,7 +15,8 @@
 // Import required Modules
 var comms = require('morphBridge').comms,
     logger = require('morphBridge').logger,
-    channels_obj = require('morphBridge').channels_obj, 
+    channels_obj = require('morphBridge').channels_obj,
+    buffer = channels_obj.newBuffer(), 
     net = require('net'),
     HOST = '127.0.0.1',
     PORT = 4050;
