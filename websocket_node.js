@@ -5,7 +5,8 @@ This is a bridging node for websocket transport.
 //Express is not necesary for this application.
 var comms = require('morphBridge').comms,
 	logger = require('morphBridge').logger,
-	channels_obj = require('morphBridge').channels_obj, 
+	channels_obj = require('morphBridge').channels_obj,
+	buffer = channels_obj.newBuffer(), 
 	WebSocketServer = require('ws').Server,
 	wsPort = 9090,
 	ws = new WebSocketServer({port: wsPort}),
@@ -20,7 +21,7 @@ Place your own function to handle messages recieved by the node.
 */ 
 var handle = function(msg){
 	console.log('Received ZMQ message: '+ msg);
-	//logger.logStat('Received ZMQ message: '+ msg);
+	channels_obj.translate(msg);
 };
 
 //Socket Initialisation
