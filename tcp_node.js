@@ -16,11 +16,11 @@
 var comms = require('morphBridge').comms,
     logger = require('morphBridge').logger,
     channels_obj = require('morphBridge').channels_obj,
-    buffer = channels_obj.newBuffer(), 
     net = require('net'),
-    HOST = '127.0.0.1',
-    PORT = 4050;
+    HOST = '0.0.0.0',
+    PORT = 9501;
 
+var sock;
 //Logger Initialization
 logger.init();
 
@@ -30,7 +30,8 @@ Place your own function to handle messages recieved by the node.
 */ 
 var handle = function(msg){
     console.log('Received ZMQ message: '+ msg);
-    //logger.logStat('Received ZMQ message: '+ msg);
+    logger.logStat('TCP node Received ZMQ message: '+ msg);
+    sock.write(msg);
 };
 
 //Socket Initialisation
@@ -40,7 +41,8 @@ comms.init(handle); //Pass message handling function to sub_socket
 net.createServer(function(sock) {
 	// Introductory Message
     console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);
-    
+    //channels_obj.addSubscriber(sock);
+    sock = sock;
     // Add a 'data' event handler to this instance of socket
     sock.on('data', function(data) {
         if(comms.transmit(data))

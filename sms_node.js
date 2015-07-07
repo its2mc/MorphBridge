@@ -23,16 +23,17 @@ var comms = require('morphBridge').comms,
 //Logger Initialization
 logger.init();
 
-//Initialize buffer
-//var buffer = channels_obj.buffer_init();
+//Optionally Set a limit to the buffer to limit the size
+buffer.setLimit(5); //This code limits the buffer to 20 messages
 
 //Handle internode messages
 /*
 Place your own function to handle messages recieved by the node.
 */ 
 var handle = function(msg){
-    console.log('Received ZMQ message: '+ msg);
-    //logger.logStat('Received ZMQ message: '+ msg);
+    //console.log('Received ZMQ message: '+ msg);
+	logger.logStat('Received ZMQ message: '+ msg);
+	buffer.load(msg);
 };
 
 
@@ -80,11 +81,9 @@ function fetchMessages(lastReceivedId_) {
 				    var logStr  = 'from=' + messages[i].from;
 				    logStr     += ';message=' + messages[i].text;
 					console.log(logStr);
-
+					comms.transmit(logStr);
 				    lastReceivedId_ = messages[i].id;
 				}
-				
-				
 		    } 
 		});
 	});

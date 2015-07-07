@@ -16,7 +16,6 @@
 var comms = require('morphBridge').comms,
 	logger = require('morphBridge').logger,
 	channels_obj = require('morphBridge').channels_obj,
-	buffer = channels_obj.newBuffer(), 
     zmq = require('morphBridge/node_modules/zmq'),
 	pub = zmq.socket('pub');
 
@@ -30,7 +29,7 @@ Place your own function to handle messages recieved by the node.
 */ 
 var handle = function(msg){
     console.log('Received ZMQ message: '+ msg);
-    //logger.logStat('Received ZMQ message: '+ msg);
+    logger.logStat('Received ZMQ message: '+ msg);
     pub.send(msg);
 };
 
@@ -38,10 +37,10 @@ var handle = function(msg){
 comms.init(handle); //Pass message handling function to sub_socket
 
 //if publisher already bound skip
-pub.bind('tcp://*:2222', function(err) {
+pub.bind('tcp://*:2030', function(err) {
  	if(err)
-    	console.log("Port already established: connecting...");
+    	console.log("Port already established: connecting on 2030...");
 		//if not then connect to bound publisher
   	else
-   		console.log("Listening on 8688...");
+   		console.log("Listening on 2030...");
 });

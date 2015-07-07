@@ -16,12 +16,14 @@
 var comms = require('morphBridge').comms,
 	logger = require('morphBridge').logger,
 	channels_obj = require('morphBridge').channels_obj,
-	buffer = channels_obj.newBuffer(), 
-	http = require('http'),
-	fs = require('fs');
+	buffer = channels_obj.newBuffer(), //Buffer to store messages
+	http = require('http');
 
 //Logger Initialization
 logger.init();
+
+//Optionally Set a limit to the buffer to limit the size
+//buffer.setLimit(5); //This code limits the buffer to 20 messages
 
 //Handle internode messages
 /*
@@ -29,22 +31,23 @@ Place your own function to handle messages recieved by the node.
 */ 
 var handle = function(msg){
     console.log('Received ZMQ message: '+ msg);
+    logger.logStat('HTTP node received ZMQ message: '+ msg);
     //logger.logStat('Received ZMQ message: '+ msg);
+    buffer.load(msg);
 };
 
 //Socket Initialisation
 comms.init(handle); //Pass message handling function to sub_socket
 
-// Declare any variables/constants
-var index = fs.readFileSync('web/index.html');
-
 // Create a Server
 http.createServer(function (req, res) {
-  console.log("We got another one!! \n");
-  
-  //Format the response
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  
-  //Give back the index file
-  res.end(index);
-}).listen(4050);
+	console.log("We got another one!! \n");
+	if (buffer.buffer.length > 0){
+		res.writeHead(200, {'Content-Type': 'text/html'});
+		res.end(JSON.stringify(buffer.unload()));
+	}
+	else{
+		res.writeHead(200, {'Content-Type': 'text/html'});
+		res.end("No messages yet!");
+	}
+}).listen(8082);
