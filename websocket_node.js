@@ -9,7 +9,7 @@ var comms = require('morphBridge').comms,
 	WebSocketServer = require('ws').Server,
 	wsPort = 9090,
 	ws = new WebSocketServer({port: wsPort}),
-	host = (process.env.VCAP_APP_HOST || 'localhost');
+	host = (process.env.VCAP_APP_HOST || '0.0.0.0');
 
 var ws_sock;
 
