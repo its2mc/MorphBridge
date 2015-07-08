@@ -1648,3 +1648,6 @@
 {"level":"info","message":"Subscribed to empty channel","timestamp":"2015-06-24T14:19:11.466Z"}
 {"level":"info","message":"Enabled Publisher","timestamp":"2015-06-24T14:19:11.964Z"}
 {"level":"error","message":"child process exited with error code","timestamp":"2015-06-24T14:19:13.932Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-07-08T14:09:26.293Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-07-08T14:09:26.312Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-07-08T14:09:26.755Z"}
