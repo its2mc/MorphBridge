@@ -20,7 +20,7 @@ var comms = require('morphBridge').comms,
     HOST = '0.0.0.0',
     PORT = 9501;
 
-var sock;
+var sock_;
 //Logger Initialization
 logger.init();
 
@@ -42,7 +42,7 @@ net.createServer(function(sock) {
 	// Introductory Message
     console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);
     //channels_obj.addSubscriber(sock);
-    sock = sock;
+    
     // Add a 'data' event handler to this instance of socket
     sock.on('data', function(data) {
         if(comms.transmit(data))
@@ -54,6 +54,7 @@ net.createServer(function(sock) {
         console.log('CLOSED: ' + sock.remoteAddress +' '+ sock.remotePort);
     });
     
+    sock_ = sock;
 }).listen(PORT, HOST);
 
 console.log('Server listening on ' + HOST +':'+ PORT);

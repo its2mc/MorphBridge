@@ -72,8 +72,7 @@ function fetchMessages(lastReceivedId_) {
 	    	
 	    	//console.log(JSON.parse(chunk));
 		    var jsObject = JSON.parse(chunk);
-		    comms.transmit(chunk);
-		    
+		    		    
 		    var messages = jsObject.SMSMessageData.Messages;
 
 		    if ( messages.length > 0 ) {

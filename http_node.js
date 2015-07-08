@@ -42,7 +42,11 @@ comms.init(handle); //Pass message handling function to sub_socket
 // Create a Server
 http.createServer(function (req, res) {
 	console.log("We got another one!! \n");
+	// Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    
 	if (buffer.buffer.length > 0){
+		console.log(buffer.unload());
 		res.writeHead(200, {'Content-Type': 'text/html'});
 		res.end(JSON.stringify(buffer.unload()));
 	}
