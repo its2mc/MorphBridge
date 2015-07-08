@@ -1651,3 +1651,16 @@
 {"level":"info","message":"Enabled Subscriber","timestamp":"2015-07-08T14:09:26.293Z"}
 {"level":"info","message":"Subscribed to empty channel","timestamp":"2015-07-08T14:09:26.312Z"}
 {"level":"info","message":"Enabled Publisher","timestamp":"2015-07-08T14:09:26.755Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-07-08T14:30:01.719Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-07-08T14:33:41.292Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-07-08T14:33:41.297Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-07-08T14:33:41.800Z"}
+{"level":"info","message":"Enabled Subscriber","timestamp":"2015-07-08T14:35:03.271Z"}
+{"level":"info","message":"Subscribed to empty channel","timestamp":"2015-07-08T14:35:03.278Z"}
+{"level":"info","message":"Enabled Publisher","timestamp":"2015-07-08T14:35:03.773Z"}
+{"level":"info","message":"X Publisher Listener Established","timestamp":"2015-07-08T14:35:05.262Z"}
+{"level":"info","message":"X Subscriber Listener Established","timestamp":"2015-07-08T14:35:05.270Z"}
+{"level":"info","message":"subscribe:","timestamp":"2015-07-08T14:35:05.456Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-07-08T14:35:06.832Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-07-08T14:36:03.721Z"}
+{"level":"error","message":"child process exited with error code","timestamp":"2015-07-08T14:36:23.562Z"}
