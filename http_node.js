@@ -43,7 +43,7 @@ comms.init(handle); //Pass message handling function to sub_socket
 http.createServer(function (req, res) {
 	console.log("We got another one!! \n");
 	// Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8082');
+    res.setHeader('Access-Control-Allow-Origin', 'http://41.242.2.202:8083');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -64,4 +64,4 @@ http.createServer(function (req, res) {
 		res.writeHead(200, {'Content-Type': 'text/html'});
 		res.end("No messages yet!");
 	}
-}).listen(8082);
+}).listen(8083);
