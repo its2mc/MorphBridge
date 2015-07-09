@@ -42,7 +42,7 @@ comms.init(handle); //Pass message handling function to sub_socket
 net.createServer(function(sock) {
 	// Introductory Message
     console.log('CONNECTED: ' + sock.remoteAddress +':'+ sock.remotePort);
-    //channels_obj.addSubscriber(sock);
+    myTest.addSubscriber(sock);
     
     // Add a 'data' event handler to this instance of socket
     sock.on('data', function(data) {
