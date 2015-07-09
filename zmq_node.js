@@ -16,7 +16,7 @@
 var comms = require('morphBridge').comms,
 	logger = require('morphBridge').logger,
 	channels_obj = require('morphBridge').channels_obj,
-    zmq = require('morphBridge/node_modules/zmq'),
+  zmq = require('morphBridge/node_modules/zmq'),
 	pub = zmq.socket('pub');
 
 

@@ -10,7 +10,6 @@ $(function(){
 	$("vidApp").attr("disabled:disabled");
 	$("#join").click(function(){ 
 		$("#board").html("Connecting to Websocket Server</br>");
-
 	});
 	
 	websocket.onopen = function(evt) { 
@@ -22,15 +21,8 @@ $(function(){
 	}; 
 	
 	websocket.onmessage = function(evt) { 
-		var temp = readMsg(evt.data);
 		console.log(evt.data);
-		if(temp.command){
-			if(temp.command==="newUser") alert(temp.userIP)
-			else $("#board").append(temp.id +">>>"+temp.msg+"</br>");
-			
-		}else{
-			$("#board").append("Error!</br>");
-		}
+		$("#board").append(evt.data+"</br>");
 	}; 
 	
 	websocket.onerror = function(evt) { 
