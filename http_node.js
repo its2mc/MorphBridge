@@ -58,7 +58,7 @@ http.createServer(function (req, res) {
 	if (buffer.buffer.length > 0){
 		console.log(buffer.unload().toString());
 		res.writeHead(200, {'Content-Type': 'text/html'});
-		res.end(buffer.unload().toString());
+		res.end("'"+buffer.unload().toString()+"'");
 	}
 	else{
 		res.writeHead(200, {'Content-Type': 'text/html'});

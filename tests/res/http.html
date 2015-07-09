@@ -10,7 +10,7 @@
 	function loadMsg(){
 		$.ajax({
 			type : "GET",
-			url : "http://41.242.2.202:8083",
+			url : "http://41.242.2.202:8084",
 			dataType: "text",
 			success: function(res){
 				$("#canvas").html(res);
@@ -23,7 +23,7 @@
 	function sendMsg(){
 		$.ajax({
 			type : "GET",
-			url : "http://41.242.2.202:8083",
+			url : "http://41.242.2.202:8084",
 			data: "data="+$("#txt").val(),
 			dataType: "text",
 			success: function(res){
