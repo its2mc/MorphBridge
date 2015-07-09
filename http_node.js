@@ -29,6 +29,7 @@ logger.init();
 /*
 Place your own function to handle messages recieved by the node.
 */ 
+buffer.load("Hi everybody this is the first test I will conduct");
 var handle = function(msg){
     console.log('Received ZMQ message: '+ msg);
     logger.logStat('HTTP node received ZMQ message: '+ msg);
