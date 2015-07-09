@@ -13,7 +13,7 @@ var express = require('express'),
 //Set all environments
 express.static.mime.default_type = "text/html"
  
-app.use(express.static(path.join(__dirname, '/')))
+app.use(express.static(path.join(__dirname, '/res')))
 
 //Start Server 
 app.listen(httpPort, function(){
