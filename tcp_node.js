@@ -32,7 +32,7 @@ Place your own function to handle messages recieved by the node.
 var handle = function(msg){
     console.log('Received ZMQ message: '+ msg);
     logger.logStat('TCP node Received ZMQ message: '+ msg);
-    sock.write(msg);
+    myTest.bare_broadcast(msg);
 };
 
 //Socket Initialisation

@@ -25,14 +25,14 @@ var handle = function(msg){
 	console.log('Received ZMQ message: '+ msg);
 	logger.logStat('Websocket node received ZMQ message: '+ msg);
 	//channels_obj.translate(msg); //broadcast messages
-	ws_sock.send(msg);
+	myTest.broadcast(msg);
 };
 
 //Socket Initialisation
 comms.init(handle); //Pass message handling function to sub_socket
 
 ws.on('connection', function (ws_sock) {
-	ws_sock = ws_sock;
+	myTest.addSubscriber(ws_sock);
     ws_sock.on('message', function (message) {
   		console.log(message);
 		if(comms.transmit(message))
