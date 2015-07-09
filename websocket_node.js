@@ -39,4 +39,8 @@ ws.on('connection', function (ws_sock) {
 			console.log("Message Sent");
 //			logger.logStat("Message Sent");
     });
+
+    ws_sock.on('close',function (){
+    	myTest.unsubscribe(ws_sock);
+    });
 });

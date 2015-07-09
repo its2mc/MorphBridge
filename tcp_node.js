@@ -53,6 +53,7 @@ net.createServer(function(sock) {
     // Add a 'close' event handler to this instance of socket
     sock.on('close', function(data) {
         console.log('CLOSED: ' + sock.remoteAddress +' '+ sock.remotePort);
+        myTest.unsubscribe(sock);
     });
     
     sock_ = sock;
