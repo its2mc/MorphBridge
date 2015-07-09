@@ -29,7 +29,7 @@ logger.init();
 /*
 Place your own function to handle messages recieved by the node.
 */ 
-buffer.load("Hi everybody this is the first test I will conduct");
+
 var handle = function(msg){
     console.log('Received ZMQ message: '+ msg);
     logger.logStat('HTTP node received ZMQ message: '+ msg);
@@ -45,8 +45,7 @@ http.createServer(function (req, res) {
 	console.log("We got another one!! \n");
 	//Get data from request and commit to global pool
 	var queryObject = url.parse(req.url,true).query;
-	console.log(query[0]);
-	comms.commit(query[0]);
+	comms.transmit(queryObject.toString());
 	// Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'http://41.242.2.202:800');
 
