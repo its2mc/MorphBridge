@@ -56,7 +56,7 @@ http.createServer(function (req, res) {
     res.setHeader('Access-Control-Allow-Credentials', true);
 
 	if (buffer.buffer.length > 0){
-		console.log(buffer.unload().toString());
+		//console.log(buffer.unload().toString());
 		res.writeHead(200, {'Content-Type': 'text/html'});
 		res.end("'"+buffer.unload().toString()+"'");
 	}
