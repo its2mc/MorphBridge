@@ -16,6 +16,7 @@
 var comms = require('morphBridge').comms,
     logger = require('morphBridge').logger,
     channels_obj = require('morphBridge').channels_obj,
+    myTest = channels_obj.newChannel(),
     net = require('net'),
     HOST = '0.0.0.0',
     PORT = 9501;

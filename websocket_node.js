@@ -6,6 +6,7 @@ This is a bridging node for websocket transport.
 var comms = require('morphBridge').comms,
 	logger = require('morphBridge').logger,
 	channels_obj = require('morphBridge').channels_obj,
+	myTest = channels_obj.newChannel(),
 	WebSocketServer = require('ws').Server,
 	wsPort = 9090,
 	ws = new WebSocketServer({port: wsPort}),
