@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="bootstrap_3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="bootstrap_3.0.3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery-1.9.0.js"></script> 
+<script>
+
+	function loadMsg(){
+		$.ajax({
+			type : "GET",
+			url : "http://41.242.2.202:8083",
+			dataType: "text",
+			success: function(res){
+				$("#canvas").html(res);
+			},
+			error: function(xhr,status){
+				console.log("Cannot access Server" + JSON.stringify(xhr));
+			}
+		});
+	}
+	function sendMsg(){
+		$.ajax({
+			type : "GET",
+			url : "http://41.242.2.202:8083",
+			data: "data="+$("#txt").val(),
+			dataType: "text",
+			success: function(res){
+				$("#canvas").html(res);
+			},
+			error: function(xhr,status){
+				console.log("Cannot access Server" + JSON.stringify(xhr));
+			}
+		});
+	}	
+</script> 
+
+<title>HTTP NODE EXAMPLE</title>
+</head>
+	<body>
+		<!-- Fixed navbar -->
+	    <nav class="navbar navbar-default navbar-static-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <h2>HTTP NODE EXAMPLE</h2>
+	        </div>
+	      </div>
+	    </nav>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+	    <div class="jumbotron">
+	      <div class="container">
+	        <p><input type="text" placeholder="Input message here" id="txt"/></p>
+	        <p><button  class="btn btn-primary btn-md" onClick="javascript:sendMsg();">Send Message</button></p>
+	      </div>
+	    </div>
+	    
+	 	<div class="container">
+	 		<div class="row">
+	 			<input  class="btn btn-primary btn-md" type="button" onClick="javascript:loadMsg()" value="Press to load messages"/>
+	 		</div>
+	    	<div class="row">
+	    		<p id="canvas">Messages will be loaded here</br></p>
+	    	</div>
+	    </div>
+      
+	    <footer class="footer">
+	      <div class="container">
+	        <p class="text-muted">Made by Phillip Ochola Mak'Anyengo.</p>
+	      </div>
+	    </footer>
+	</body>
+</html>
