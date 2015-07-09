@@ -43,8 +43,18 @@ comms.init(handle); //Pass message handling function to sub_socket
 http.createServer(function (req, res) {
 	console.log("We got another one!! \n");
 	// Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8082');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
 	if (buffer.buffer.length > 0){
 		console.log(buffer.unload());
 		res.writeHead(200, {'Content-Type': 'text/html'});
