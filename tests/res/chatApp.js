@@ -22,7 +22,7 @@ $(function(){
 	
 	websocket.onmessage = function(evt) { 
 		console.log(evt.data);
-		$("#board").append(evt.data+"</br>");
+		$("#board").append(JSON.stringify(evt.data)+"</br>");
 	}; 
 	
 	websocket.onerror = function(evt) { 
