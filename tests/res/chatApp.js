@@ -23,6 +23,7 @@ $(function(){
 	
 	websocket.onmessage = function(evt) { 
 		var temp = readMsg(evt.data);
+		console.log(evt.data);
 		if(temp.command){
 			if(temp.command==="newUser") alert(temp.userIP)
 			else $("#board").append(temp.id +">>>"+temp.msg+"</br>");
