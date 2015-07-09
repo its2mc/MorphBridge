@@ -16,6 +16,7 @@
 var comms = require('morphBridge').comms,
 	logger = require('morphBridge').logger,
 	channels_obj = require('morphBridge').channels_obj,
+	url = require('url'),
 	buffer = channels_obj.newBuffer(), //Buffer to store messages
 	http = require('http');
 
@@ -45,7 +46,7 @@ http.createServer(function (req, res) {
 	console.log("We got another one!! \n");
 	//Get data from request and commit to global pool
 	var queryObject = url.parse(req.url,true).query;
-	comms.transmit(queryObject.toString());
+	if (queryObject[0]) comms.transmit(queryObject[0]);
 	// Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'http://41.242.2.202:800');
 
