@@ -9,7 +9,7 @@ For more info, read the App Description and Design document up top.
 	<li>Install the morphbridge module (npm install morphbridge)</li>
 	<li>To test the platform you can do:
 	<ul>
-		<li>Edit the ip address in the test http.html webpage at lines 13 and 26. "nano tests/static/http.html"</li>
+		<li>Edit the ip address in the test http.html webpage at lines 13 and 26. "nano tests/res/http.html"</li>
 		<li>Run "npm install express" You are free to install the required modules for your node.</li>
 		<li>Run "node tests/server.js &"</li>
 		<li>Run "node http_node.js"</li>
