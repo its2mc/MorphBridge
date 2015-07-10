@@ -13,10 +13,10 @@
 //Nodejs implementation of a http server
 
 // Import required Modules
-var comms = require('morphBridge').comms,
-	logger = require('morphBridge').logger,
-	channels_obj = require('morphBridge').channels_obj,
-  zmq = require('morphBridge/node_modules/zmq'),
+var comms = require('morphbridge').comms,
+	logger = require('morphbridge').logger,
+	channels_obj = require('morphbridge').channels_obj,
+  zmq = require('morphbridge/node_modules/zmq'),
 	pub = zmq.socket('pub');
 
 

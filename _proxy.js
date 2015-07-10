@@ -1,8 +1,8 @@
 /*
 This document serves as the proxy that allows for internode communication
 */
-var zmq = require('morphBridge/node_modules/zmq'),
-logger = require('morphBridge').logger,
+var zmq = require('morphbridge/node_modules/zmq'),
+logger = require('morphbridge').logger,
 publisher = zmq.socket('pub'),
 subscriber = zmq.socket('sub'),
 xsubSock = zmq.socket('xsub'),

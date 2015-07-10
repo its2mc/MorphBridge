@@ -13,9 +13,9 @@
 //Nodejs implementation of a http server
 
 // Import required Modules
-var comms = require('morphBridge').comms,
-	logger = require('morphBridge').logger,
-	channels_obj = require('morphBridge').channels_obj,
+var comms = require('morphbridge').comms,
+	logger = require('morphbridge').logger,
+	channels_obj = require('morphbridge').channels_obj,
 	buffer = channels_obj.newBuffer(), 
     http = require('http'),
     https = require('https');

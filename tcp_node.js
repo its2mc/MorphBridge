@@ -13,9 +13,9 @@
 //Nodejs implementation of a tcp server
 
 // Import required Modules
-var comms = require('morphBridge').comms,
-    logger = require('morphBridge').logger,
-    channels_obj = require('morphBridge').channels_obj,
+var comms = require('morphbridge').comms,
+    logger = require('morphbridge').logger,
+    channels_obj = require('morphbridge').channels_obj,
     myTest = channels_obj.newChannel(),
     net = require('net'),
     HOST = '0.0.0.0',
