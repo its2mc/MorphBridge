@@ -6,7 +6,7 @@ This is a bridging node for websocket transport.
 var comms = require('morphbridge').comms,
 	logger = require('morphbridge').logger,
 	channels_obj = require('morphbridge').channels_obj,
-	myTest = channels_obj.newChannel(),
+	mainChannel = channels_obj.newChannel(),
 	WebSocketServer = require('ws').Server,
 	wsPort = 9090,
 	ws = new WebSocketServer({port: wsPort}),
@@ -25,22 +25,22 @@ var handle = function(msg){
 	console.log('Received ZMQ message: '+ msg);
 	logger.logStat('Websocket node received ZMQ message: '+ msg);
 	//channels_obj.translate(msg); //broadcast messages
-	myTest.broadcast(msg);
+	mainChannel.websocket_bcast(msg);
 };
 
-//Socket Initialisation
-comms.init(handle); //Pass message handling function to sub_socket
+//Mesh Network Connection Initialization
+comms.init(handle); //Pass message handling function to mesh network connection
 
 ws.on('connection', function (ws_sock) {
-	myTest.subscribe(ws_sock);
+	mainChannel.subscribe(ws_sock);
     ws_sock.on('message', function (message) {
-  		console.log(message);
+  		//console.log(message);
 		if(comms.transmit(message))
 			console.log("Message Sent");
 //			logger.logStat("Message Sent");
     });
 
     ws_sock.on('close',function (){
-    	myTest.unsubscribe(ws_sock);
+    	mainChannel.unsubscribe(ws_sock);
     });
 });

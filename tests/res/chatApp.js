@@ -1,13 +1,8 @@
-var readMsg = function (msg){
-	var temp = JSON.parse(msg);
-	return temp;
-};
 
 var wsUri = "ws://41.242.2.202:9090";
 websocket = new WebSocket(wsUri);
 
 $(function(){
-	$("vidApp").attr("disabled:disabled");
 	$("#join").click(function(){ 
 		$("#board").html("Connecting to Websocket Server</br>");
 	});
