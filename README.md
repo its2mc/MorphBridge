@@ -57,5 +57,5 @@ For more info, read the App Description and Design document up top.
 	
 </p>
 <u>
-	<li>Zero MQ Software: http://zeromq.org/intro:get-the-software</li>
+	<li></li>
 </u>
