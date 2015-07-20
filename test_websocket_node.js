@@ -14,9 +14,6 @@ var comms = require('morphbridge').comms,
 
 var ws_sock;
 
-//Logger Initialization
-logger.init();
-
 //Handle internode messages
 /*
 Place your own function to handle messages recieved by the node.

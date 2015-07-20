@@ -20,9 +20,6 @@ var comms = require('morphbridge').comms,
 	pub = zmq.socket('pub');
 
 
-//Logger Initialization
-logger.init();
-
 //Handle internode messages
 /*
 Place your own function to handle messages recieved by the node.

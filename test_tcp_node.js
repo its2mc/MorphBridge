@@ -22,8 +22,6 @@ var comms = require('morphbridge').comms,
     PORT = 9501;
 
 var sock_;
-//Logger Initialization
-logger.init();
 
 //Handle internode messages
 /*

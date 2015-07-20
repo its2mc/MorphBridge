@@ -20,9 +20,6 @@ var comms = require('morphbridge').comms,
 	buffer = channels_obj.newBuffer(), //Buffer to store messages
 	http = require('http');
 
-//Logger Initialization
-logger.init();
-
 //Optionally Set a limit to the buffer to limit the size
 //buffer.setLimit(5); //This code limits the buffer to 20 messages
 
