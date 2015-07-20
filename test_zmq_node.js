@@ -25,8 +25,8 @@ var comms = require('morphbridge').comms,
 Place your own function to handle messages recieved by the node.
 */ 
 var handle = function(msg){
-    console.log('Received ZMQ message: '+ msg);
-    logger.logStat('Received ZMQ message: '+ msg);
+    //console.log('ZMQ node received ZMQ message');
+    //logger.logStat('ZMQ node received ZMQ message');
     pub.send(msg);
 };
 

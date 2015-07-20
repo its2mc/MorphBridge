@@ -19,9 +19,9 @@ var ws_sock;
 Place your own function to handle messages recieved by the node.
 */ 
 var handle = function(msg){
-	console.log('Received ZMQ message: '+ msg);
-	logger.logStat('Websocket node received ZMQ message: '+ msg);
-	//channels_obj.translate(msg); //broadcast messages
+	//console.log('Websocket node received ZMQ message');
+	//logger.logStat('Websocket node received ZMQ message');
+	//channels_obj.translate(msg); //Allows for clients to dynamically start new channels
 	mainChannel.websocket_bcast(msg);
 };
 

@@ -29,9 +29,8 @@ Place your own function to handle messages recieved by the node.
 */ 
 
 var handle = function(msg){
-    console.log('Received ZMQ message: '+ msg);
-    logger.logStat('HTTP node received ZMQ message: '+ msg);
-    //logger.logStat('Received ZMQ message: '+ msg);
+    //console.log('HTTP node received ZMQ message');
+    //logger.logStat('HTTP node received ZMQ message');
     buffer.load(msg);
 };
 

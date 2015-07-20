@@ -28,8 +28,8 @@ buffer.setLimit(5); //This code limits the buffer to 20 messages
 Place your own function to handle messages recieved by the node.
 */ 
 var handle = function(msg){
-    //console.log('Received ZMQ message: '+ msg);
-	logger.logStat('Received ZMQ message: '+ msg);
+    //console.log('SMS node received ZMQ message');
+	//logger.logStat('SMS node received ZMQ message');
 	buffer.load(msg);
 };
 
