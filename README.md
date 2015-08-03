@@ -51,7 +51,7 @@ For more info, read the App Description and Design document up top.
 </p>
 <p>
 	<h3>Logger</h3>
-	
+	The logger object is a simple winston based logger that is intended to make Logging easy and 
 </p>
 <p>
 	<h3>Buffer</h3>

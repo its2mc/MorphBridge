@@ -21,7 +21,7 @@ var comms = require('morphbridge').comms,
     https = require('https');
 
 //Optionally Set a limit to the buffer to limit the size
-buffer.setLimit(5); //This code limits the buffer to 20 messages
+//buffer.setLimit(5); //This code limits the buffer to 20 messages
 
 //Handle internode messages
 /*
