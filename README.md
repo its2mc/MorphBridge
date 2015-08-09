@@ -32,7 +32,7 @@ For more info, read the App Description and Design document up top.
 		<li>comms.init(handle_function)</li>
 		<li>comms.transmit(msg)</li>
 	</u>
-	The init function allows the node that is running it to communicate to other nodes in the localhost. The handle_function that is passed is mandatory since it handles messages that this node recieves. Although an error won't exactly happen, the messages need to be handled for safety. You can pass it to the logger. The transmit function sends a message to all the nodes that are running. The message can be binary/text e.t.c. JSON is nice.. Below is a sample script that shows how these can be implemented.
+	Comms is the object created when the mesh network is established. The init function allows the node that is running it to communicate to other nodes in the localhost. The handle_function that is passed is mandatory since it handles messages that this node recieves. Although an error won't exactly happen, the messages need to be handled for safety. You can pass it to the logger. The transmit function sends a message to all the nodes that are running. The message can be binary/text e.t.c. JSON is nice.. Below is a sample script that shows how these can be implemented.
 </p>
 <p>
 	
@@ -43,20 +43,38 @@ For more info, read the App Description and Design document up top.
 		<li>channels object</li>
 		<li>logger</li>
 		<li>buffer</li>
+
 	</u>
 </p>
 <p>
 	<h3>Channels Object</h3>
-
+	Warning: Still under heavy development... Well the aim of the channels object was to allow for easy client. I had hope to implement methods such as client subscription, client removal, channel creation and deletion. This would allow you to register a client on a node to a certain channel and only have the client recieve messages from other channel clients. Clients would also be able to be removed from a channel when they close their connection or upon the evil wishes of the node master.. :D (thats you). However, as I developed this I realised that it was a bigger undertaking than I thought. I should actually develop it as a separate module.. In case there is a better substitute module, then don't require it. That said, I will give a basic rundown of the features I have implemented so far, or partially implemented. 
+		<u>
+			<li>channels_obj.createChannel / channelsobj.destroyChannel</li>
+			<li>channels_obj.subscribe(client id)/channelsobj.unsubscribe(client id)</li>
+			<li>channels_obj.newBuffer() -- Buffer object (Described below..)</li>
+			<li>channels_obj.tcp_bcast -- TCP Broadcast</li>
+			<li>channels_obj.websocket_bcast -- Websocket Broadcast</li>
+			<li>channels_obj.setTimeout/checkTimeout/removeTimeout -- Timeout feature (not fully tested!!) </li>
+			<li>channels_obj.translate (msg, client id)<br/>
+			Well.. using this function, a client of a node can directly control channel creation/destruction/and broadcasting. This feature was to allow a device to autonomously control which devices it is communicating with... giving more autonomy to the network of iot devices.</li>
+		</u>
 </p>
 <p>
 	<h3>Logger</h3>
-	The logger object is a simple winston based logger that is intended to make Logging easy and 
+	<b>Warning: You have to create a logs folder in your base folder. Otherwise the nodes will not start.. working on a fix.. ㅠㅠ</b>
+	The logger object is a simple winston based logger that is intended to make Logging easy and non blocking. The efficiency of the logger is determined by the winston logging module hence is subject to changes that the maintainers of the module make. That said to make it easy, I have masked the internal function of the winston logger so that you only need to know two functions from the logger object. i.e.
+	<u>
+		<li>logger.logStat(msg)</li>
+		<li>logger.logErr(msg)</li>
+	</u>
 </p>
 <p>
 	<h3>Buffer</h3>
-	
+	This is a very simple buffer implementation that aims to accomodate non real time protocols/transports such as http post/get or sms. Be careful with the buffer as careless use can result in a runaway memory buildup. For the next morphbridge release I will set the preset limit of the buffer to 10 messages. However, if you would like to save more messages you can set the limit using the setLimit function I will list below. A fact worth noting, the buffer is emptied when a client queries for the stored messages. So it might not work if you have multiple asynchronous clients. It is a very basic buffer but it does its job well. That said, here are the functions exposed with the buffer object.
+	<u>
+		<li>buffer.load(msg) -- load a message to buffer.. order of messages entry might be confusing..:(</li>
+		<li>buffer.unload() -- returns messages and empties buffer</li>
+		<li>buffer.setLimit(int) -- sets an integer limit to the buffer size</li>
+	</u>
 </p>
-<u>
-	<li></li>
-</u>

@@ -21,7 +21,6 @@ var comms = require('morphbridge').comms,
     HOST = '0.0.0.0',
     PORT = 9501;
 
-var sock_;
 
 //Handle internode messages
 /*
@@ -54,7 +53,6 @@ net.createServer(function(sock) {
         mainChannel.unsubscribe(sock);
     });
     
-    sock_ = sock;
 }).listen(PORT, HOST);
 
 console.log('Server listening on ' + HOST +':'+ PORT);

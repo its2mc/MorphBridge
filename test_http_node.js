@@ -42,9 +42,10 @@ http.createServer(function (req, res) {
 	console.log("We got another one!! \n");
 	//Get data from request and commit to global pool
 	var queryObject = url.parse(req.url,true).query;
+	console.log(queryObject[0]);
 	if (queryObject[0]) comms.transmit(queryObject[0]);
 	// Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://41.242.2.202:800');
+    res.setHeader('Access-Control-Allow-Origin', 'http://41.242.2.202:800'); //Change this ip to yours.. sry.. :D 
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
