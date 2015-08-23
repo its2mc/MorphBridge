@@ -41,3 +41,9 @@ ws.on('connection', function (ws_sock) {
     	mainChannel.unsubscribe(ws_sock);
     });
 });
+
+process.on('SIGINT', function() {
+  comms.close()
+  console.log('\nClosed')
+  process.exit();
+});

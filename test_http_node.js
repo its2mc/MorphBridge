@@ -67,3 +67,9 @@ http.createServer(function (req, res) {
 		res.end("No messages yet!");
 	}
 }).listen(8084);
+
+process.on('SIGINT', function() {
+  comms.close()
+  console.log('\nClosed')
+  process.exit();
+});

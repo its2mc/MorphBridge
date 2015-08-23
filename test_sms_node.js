@@ -96,3 +96,9 @@ var lastReceivedId = 0;
 setTimeout(function(){ 
 	fetchMessages(lastReceivedId); 
 }, 3000);
+
+process.on('SIGINT', function() {
+  comms.close()
+  console.log('\nClosed')
+  process.exit();
+});

@@ -41,3 +41,9 @@ pub.bind('tcp://*:2030', function(err) {
   	else
    		console.log("Listening on 2030...");
 });
+
+process.on('SIGINT', function() {
+  comms.close()
+  console.log('\nClosed')
+  process.exit();
+});
