@@ -22,7 +22,7 @@ var handle = function(msg){
 	//console.log('Websocket node received ZMQ message');
 	//logger.logStat('Websocket node received ZMQ message');
 	//channels_obj.translate(msg); //Allows for clients to dynamically start new channels
-	mainChannel.websocket_bcast(msg);
+	mainChannel.websocket_bcast(""+msg.toString('utf8')+"");
 };
 
 //Mesh Network Connection Initialization
